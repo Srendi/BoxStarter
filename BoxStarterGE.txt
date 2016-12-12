@@ -1,0 +1,87 @@
+Set-ExecutionPolicy Unrestricted -Force
+Update-ExecutionPolicy Unrestricted
+Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPathInTitleBar
+disable-uac 
+disable-microsoftupdate
+install-windowsupdate -acceptEULA
+Set-TaskbarOptions -Size Small -Lock -Dock Bottom
+Enable-RemoteDesktop
+Enable-PSRemoting -Force
+Set-StartScreenOptions -EnableBootToDesktop -EnableDesktopBackgroundOnStart -EnableShowStartOnActiveScreen -EnableShowAppsViewOnStartScreen -EnableSearchEverywhereInAppsView -EnableListDesktopAppsFirst
+Set-CornerNavigationOptions -EnableUpperRightCornerShowCharms -EnableUpperLeftCornerSwitchApps -EnableUsePowerShellOnWinX
+#All
+cinst -y toolsroot 
+
+#DeepDev
+cinst -y visualstudio2015community ankhsvn easy.install android-sdk adb androidstudio ruby rubygems
+cinst -y git github fiddler4 poshgit posh-hg windirstat jdk8 sourcetree hg maven eclipse sqlyog 
+cinst -y mssqlservermanagementstudio2014express windbg autorest
+
+#CustDev
+cinst -y frozenbytes.baseline.dev.core frozenbytes.baseline.dev.sdks frozenbytes.baseline.dev.vs frozenbytes.baseline.dev frozenbytes.baseline.dev.tools alanstevens.utils.vm
+cinst -y windows-sdk-8.1 mssqlserver2014express instantwordpress
+
+#Dev
+cinst -y DotNet4.5 python python2 pywin pip vcredist2008 vcredist2013 powershell -pre 
+cinst -y markdownpad2 tortoisesvn tortoisehg 
+
+#Servers
+cinst -y royalserver hmailserver nginx apacheds 
+
+#Deep SysAdmin
+cinst -y wireshark virtualbox virtualbox.extensionpack vboxvmservice vboxguestadditions nmap ketarin chocolateygui baretail vagrant vagrant-manager autoit yumi unetbootin awscli bind-toolsonly
+cinst -y winpcap nssm crystaldiskinfo zabbix-agent consul openvpn windowsrepair packer vmwareplayer vmware-tools windows-adk-winpe  windows-adk.all royalts rmprepusb
+cinst -y chefdk chef_development skylight cyberduck kb2842230 wim2vhd disk2vhd hxd rsat mbca emet rukerneltool xming docker docker-machine boot2docker lockhunter ext2explore
+cinst -y apachedirectorystudio -pre spiceworks projectlibre nagstamon 
+
+#SysAdmin
+cinst -y ccleaner ccenhancer sysinternals 7zip procexp winrar cdburnerxp speccy teamviewer malwarebytes curl wget notepadplusplus.install usbview unxutils mobaxterm 
+cinst -y defraggler cpu-z recuva winscp putty winmerge microsoftsecurityessentials truecrypt classic-shell intel.ssd.toolbox seatools teracopy -pre 
+cinst -y driverbooster autoruns revo.uninstaller synergy linkshellextension bleachbit visioviewer windowstelnet fciv speedfan hpusbdisk speedfan netscan64 
+cinst -y boxstarter.windowsupdate tcpoptimizer closethedoor setacl swissfileknife dnsdataview gsmartcontrol driverfusion awatch rhash prey sumo crashplan
+
+
+
+#Media
+cinst -y vlc calibre kindle adobereader flashplayerplugin adobeshockwaveplayer flashplayeractivex f.lux ffmpeg handbrake cccp musicbee
+cinst -y youtube-dl gimp greenshot foxitreader quicktime audacity cutepdf spotify sumatrapdf mp3tag paint.net screamer
+cinst -y aimp mediainfo ums fleex imageresizerapp tagscanner exiftool geosetter.install -pre 
+
+#Deep Torrents
+cint -y couchpotato sickbeard filebot isoplex kodi
+
+#Torrents
+#cinst -y transmission-qt transgui time4popcorn peerblock
+cinst -y utorrent time4popcorn peerblock
+
+#Games
+cinst -y 0ad openra flightgear freeciv heroesofnewerth supertuxkart raidcall battle.net geforce-experience steam daemontoolslite mumble launchbox emulationstation gamedownloader dolphin -pre
+
+#DeepDesktop/internet
+cinst -y keepass keepas-keepasshttp keepass-plugin-1p2kp ditto gsyncit insync boxcryptor gpg4win growl btsync httrack autohotkey dexpot inssider windows-tweaker firefox adblockplusfirefox thunderbird
+cinst -y tor-browser pomotime fileshredder duplicatecleaner 
+
+# Desktop/internet
+cinst -y skype skype-utility-project pdfcreator avastfreeantivirus secunia.psi filezilla dropbox dropboxifier owncloud-client onedrive pushbullet logmein.client mirc
+cinst -y googlechrome libreoffice googledrive googleearth pidgin adblockplusie adblockpluschrome 
+cinst -y clover jre8 javaruntime javaruntime-preventasktoolbar wincommandpaste spybot viber workrave nfopad ie11 boinc produkey ekiga jitsi 
+
+#Study/Business/Other
+# cinst -y zotero-standalone charmtimetracker
+# cinst -y  gnucash electrum jstock
+# cinst -y gcstar datacrow 
+# cinst -y fitbit.connect
+
+#HIDS
+# cinst -y nscp ossec-agent opsview-agent-x64 opsview-agent-x32 suricata
+
+# Move-LibraryDirectory "Personal" "$env:UserProfile\skydrive\documents"
+
+# Client SKUs need to enable firewall
+#    netsh advfirewall firewall add rule name="Open Port 80" dir=in action=allow protocol=TCP localport=80
+	
+enable-uac 
+enable-microsoftupdate
+
+# http://boxstarter.org/package/boxstarter.windowsupdate 
+#  utorrent  headphones  
