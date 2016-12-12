@@ -14,8 +14,9 @@ cinst -y toolsroot
 
 #DeepDev
 cinst -y visualstudio2015community ankhsvn easy.install android-sdk adb androidstudio ruby rubygems
-cinst -y git github fiddler4 poshgit posh-hg windirstat jdk8 sourcetree hg maven eclipse sqlyog 
+cinst -y git-credential-winstore git github fiddler4 poshgit posh-hg windirstat jdk8 sourcetree hg maven eclipse sqlyog 
 cinst -y mssqlservermanagementstudio2014express windbg autorest
+cinst console-devel sublimetext2 dotpeek
 
 #CustDev
 cinst -y frozenbytes.baseline.dev.core frozenbytes.baseline.dev.sdks frozenbytes.baseline.dev.vs frozenbytes.baseline.dev frozenbytes.baseline.dev.tools alanstevens.utils.vm
